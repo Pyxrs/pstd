@@ -4,13 +4,13 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-anyhow = "1.0"
-dashmap = { version = "5.5", features = ["rayon", "serde"] }
-flume = { version = "0.11", features = ["async", "select"] }
-futures-lite = "2.3"
-log = "0.4"
-parking_lot = "0.12"
-rand = { version = "0.8", features = ["log"] }
-rayon = "1.8"
-serde = "1.0"
-serde_json = "1.0"
+anyhow = "*"
+dashmap = { version = "*", features = ["rayon", "serde"] }
+flume = { version = "*", features = ["async", "select"] }
+futures-lite = "*"
+log = "*"
+parking_lot = "*"
+rand = { version = "*", features = ["log"] }
+rayon = "*"
+serde = "*"
+serde_json = "*"
