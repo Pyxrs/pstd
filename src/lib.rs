@@ -6,8 +6,6 @@ pub use log;
 pub use parking_lot as sync;
 pub use rand;
 pub use rayon;
-pub use serde;
-pub use serde_json;
 
 pub mod prelude {
     pub use anyhow::*;

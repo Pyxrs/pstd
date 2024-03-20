@@ -12,5 +12,3 @@ log = "*"
 parking_lot = "*"
 rand = { version = "*", features = ["log"] }
 rayon = "*"
-serde = { version = "*", features = ["derive"] }
-serde_json = "*"
