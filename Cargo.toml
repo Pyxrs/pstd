@@ -5,10 +5,10 @@ edition = "2021"
 
 [dependencies]
 anyhow = "*"
-dashmap = { version = "*", features = ["rayon", "serde"] }
 flume = { version = "*", features = ["async", "select"] }
 futures-lite = "*"
 log = "*"
 parking_lot = "*"
 rand = { version = "*", features = ["log"] }
 rayon = "*"
+scc = { version = "*", features = ["serde"] }
