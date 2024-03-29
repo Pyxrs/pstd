@@ -9,6 +9,6 @@ pub use scc;
 
 pub mod prelude {
     pub use anyhow;
-    pub use log::*;
+    pub use log::{ error, warn, info, debug, trace };
     pub use futures_lite::future::block_on;
 }
