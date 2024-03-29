@@ -8,7 +8,7 @@ pub use rayon;
 pub use scc;
 
 pub mod prelude {
-    pub use anyhow::*;
+    pub use anyhow;
     pub use log::*;
     pub use futures_lite::future::block_on;
 }
