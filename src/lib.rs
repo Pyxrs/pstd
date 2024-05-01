@@ -17,4 +17,5 @@ pub mod prelude {
         stream_select, try_join,
     };
     pub use log::{debug, error, info, trace, warn};
+    pub use std::time::{Duration, Instant};
 }
