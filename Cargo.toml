@@ -6,6 +6,7 @@ edition = "2021"
 [dependencies]
 anyhow = "*"
 chrono = { version = "*", features = ["serde"] }
+closure = "*"
 flume = { version = "*", features = ["async", "select"] }
 futures = "*"
 log = "*"

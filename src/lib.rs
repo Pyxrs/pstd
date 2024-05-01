@@ -11,6 +11,7 @@ pub use scc;
 pub mod prelude {
     pub use anyhow;
     pub use chrono::prelude as time;
+    pub use closure::closure;
     pub use futures::{
         executor::block_on, join, pending, pin_mut, poll, ready, select, select_biased,
         stream_select, try_join,
