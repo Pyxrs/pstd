@@ -9,7 +9,7 @@ pub use rayon;
 pub use scc;
 
 pub mod prelude {
-    pub use anyhow;
+    pub use anyhow::{anyhow, bail, ensure, Result as AnyResult};
     pub use chrono::prelude as time;
     pub use closure::closure;
     pub use log::{debug, error, info, trace, warn};
