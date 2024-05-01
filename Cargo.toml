@@ -7,7 +7,7 @@ edition = "2021"
 anyhow = "*"
 chrono = { version = "*", features = ["serde"] }
 flume = { version = "*", features = ["async", "select"] }
-futures-lite = "*"
+futures = "*"
 log = "*"
 parking_lot = "*"
 rand = { version = "*", features = ["log"] }
