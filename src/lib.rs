@@ -1,5 +1,6 @@
 pub use anyhow;
 pub use chrono as time;
+pub use fastrand;
 pub use flume as mpmc;
 pub use futures;
 pub use log;
