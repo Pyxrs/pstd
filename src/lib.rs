@@ -7,7 +7,6 @@ pub use parking_lot as sync;
 pub use rand;
 pub use rayon;
 pub use scc;
-pub use thiserror;
 
 pub mod prelude {
     pub use chrono::prelude as time;
