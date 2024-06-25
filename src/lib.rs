@@ -18,7 +18,8 @@ pub mod prelude {
 }
 
 pub mod anyhow {
-    pub use anyhow::{Result as AnyResult, *};
+    pub use anyhow::{anyhow, bail, ensure, Chain, Context, Error, Ok};
+    pub type AnyResult<T> = anyhow::Result<T>;
 }
 
 pub mod asyn {
