@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+ahash = { version = "*", features = ["serde"] }
 anyhow = "*"
 chrono = { version = "*", features = ["serde"] }
 closure = "*"

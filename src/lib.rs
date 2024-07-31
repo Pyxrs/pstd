@@ -1,3 +1,4 @@
+pub use ahash;
 pub use chrono as time;
 pub use fastrand;
 pub use flume as mpmc;
@@ -7,7 +8,7 @@ pub use parking_lot as sync;
 pub use rand;
 pub use rayon;
 pub use relative_path as path;
-pub use scc;
+pub use scc as chash; // Concurrent hash types
 
 pub mod prelude {
     pub use chrono::prelude as time;
