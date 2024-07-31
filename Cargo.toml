@@ -15,3 +15,4 @@ rand = { version = "*", features = ["log"] }
 fastrand = "*"
 rayon = "*"
 scc = { version = "*", features = ["serde"] }
+relative-path = { version = "*", features = ["serde"] }

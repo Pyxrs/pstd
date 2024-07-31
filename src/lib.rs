@@ -6,6 +6,7 @@ pub use log;
 pub use parking_lot as sync;
 pub use rand;
 pub use rayon;
+pub use relative_path as path;
 pub use scc;
 
 pub mod prelude {
