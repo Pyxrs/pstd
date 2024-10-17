@@ -15,12 +15,12 @@ pub mod prelude {
     pub use std::time::{Duration, Instant};
 }
 
-// Synchronous insecure hash types
+/// Synchronous insecure hash types
 pub mod ahash {
     pub use ahash::{AHashMap, AHashSet, AHasher};
 }
 
-// Concurrent hash types
+/// Concurrent hash types
 pub mod chash {
     pub use scc::{
         Bag as CBag, HashCache as CHashCache, HashIndex as CHashIndex, HashMap as CHashMap,
@@ -37,4 +37,19 @@ pub mod anyhow {
 pub mod asyn {
     pub use futures::*;
     pub use futures::{executor::block_on, future::*};
+}
+
+/// Returns input value clamped to the interval `[min, max]`.
+#[must_use]
+#[inline]
+pub fn clamp<T: PartialOrd>(val: T, min: T, max: T) -> T {
+    if val > min {
+        if val < max {
+            val
+        } else {
+            max
+        }
+    } else {
+        min
+    }
 }
