@@ -53,3 +53,25 @@ pub fn clamp<T: PartialOrd>(val: T, min: T, max: T) -> T {
         min
     }
 }
+
+/// Returns input value clamped to the interval `[min, max]`.
+//#[inline]
+pub fn clamp_ref<T: PartialOrd>(val: &mut T, min: T, max: T) {
+    if *val > min {
+        if *val > max {
+            *val = max;
+        }
+    } else {
+        *val = min;
+    }
+}
+
+pub trait Clamp {
+    fn clamp(&mut self, min: Self, max: Self);
+}
+
+impl<T: PartialOrd> Clamp for T {
+    fn clamp(&mut self, min: Self, max: Self) {
+        clamp_ref(self, min, max);
+    }
+}
