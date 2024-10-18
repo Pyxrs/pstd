@@ -66,12 +66,12 @@ pub fn clamp_ref<T: PartialOrd>(val: &mut T, min: T, max: T) {
     }
 }
 
-pub trait Clamp {
-    fn clamp(&mut self, min: Self, max: Self);
+pub trait ClampRef {
+    fn clamp_ref(&mut self, min: Self, max: Self);
 }
 
-impl<T: PartialOrd> Clamp for T {
-    fn clamp(&mut self, min: Self, max: Self) {
+impl<T: PartialOrd> ClampRef for T {
+    fn clamp_ref(&mut self, min: Self, max: Self) {
         clamp_ref(self, min, max);
     }
 }
