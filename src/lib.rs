@@ -11,6 +11,7 @@ pub use relative_path as path;
 
 pub mod prelude {
     pub use closure::closure;
+    #[cfg(feature = "log")]
     pub use log::{debug, error, info, trace, warn};
     pub use std::time::{Duration, Instant};
 }

@@ -4,7 +4,7 @@ version = "0.2.0"
 edition = "2021"
 
 [features]
-default = ["log", "rand", "async", "game"]
+default = ["log", "rand"]
 async = ["flume/async", "dep:futures"]
 game = ["dep:glam", "dep:noise"]
 image = ["dep:image", "noise/images"]
