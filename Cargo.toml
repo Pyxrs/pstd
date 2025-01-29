@@ -1,23 +1,40 @@
 [package]
 name = "pstd"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 
 [features]
-default = []
-game = []
+default = ["log", "rand", "async", "game"]
+async = ["flume/async", "dep:futures"]
+game = ["dep:glam", "dep:noise"]
+image = ["dep:image", "noise/images"]
+log = ["dep:log", "rand/log"]
+nightly = ["parking_lot/nightly", "rand/nightly", "rand/simd_support"]
+rand = ["dep:fastrand", "dep:rand", "glam/rand"]
+serde = [
+    "ahash/serde",
+    "chrono/serde",
+    "glam/serde",
+    "parking_lot/serde",
+    "relative-path/serde",
+    "scc/serde",
+]
 
 [dependencies]
-ahash = { version = "*", features = ["serde"] }
+ahash = "*"
 anyhow = "*"
-chrono = { version = "*", features = ["serde"] }
+chrono = "*"
 closure = "*"
-flume = { version = "*", features = ["async", "select"] }
-futures = "*"
-log = "*"
-parking_lot = "*"
-rand = { version = "*", features = ["log"] }
-fastrand = "*"
+fastrand = { version = "*", optional = true }
+flume = { version = "*", features = ["select"] }
+futures = { version = "*", optional = true }
+# glam fast-math could cause some platform inequality
+glam = { version = "*", features = ["fast-math"], optional = true }
+image = { version = "*", optional = true }
+log = { version = "*", optional = true }
+noise = { version = "*", optional = true }
+parking_lot = { version = "*", features = ["hardware-lock-elision"] }
+rand = { version = "*", optional = true }
+relative-path = "*"
 rayon = "*"
 scc = { version = "*", features = ["serde"] }
-relative-path = { version = "*", features = ["serde"] }
