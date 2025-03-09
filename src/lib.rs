@@ -2,6 +2,8 @@ pub use chrono as time;
 pub use closure;
 #[cfg(feature = "rand")]
 pub use fastrand;
+#[cfg(feature = "image")]
+pub use image;
 #[cfg(feature = "log")]
 pub use log;
 #[cfg(feature = "rand")]
