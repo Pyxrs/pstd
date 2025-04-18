@@ -35,6 +35,12 @@ pub mod collections {
         One(T),
         Many(Vec<T>),
     }
+
+    pub enum NoneOneOrMany<T> {
+        None,
+        One(T),
+        Many(Vec<T>),
+    }
 }
 
 /// Concurrency
