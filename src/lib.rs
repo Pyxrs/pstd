@@ -30,6 +30,11 @@ pub mod r#async {
 
 pub mod collections {
     pub use ahash as insecure;
+
+    pub enum OneOrMany<T> {
+        One(T),
+        Many(Vec<T>),
+    }
 }
 
 /// Concurrency
