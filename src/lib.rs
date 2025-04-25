@@ -29,7 +29,13 @@ pub mod r#async {
 }
 
 pub mod collections {
-    pub use ahash as insecure;
+    pub mod insecure {
+        pub use ahash;
+
+        pub use ahash::AHashMap as HashMap;
+        pub use ahash::AHashSet as HashSet;
+        pub use ahash::AHasher as Hasher;
+    }
 
     pub enum OneOrMany<T> {
         One(T),
