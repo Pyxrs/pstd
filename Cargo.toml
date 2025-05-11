@@ -22,20 +22,20 @@ serde = [
 ]
 
 [dependencies]
-ahash = "*"
-anyhow = "*"
-chrono = "*"
-closure = "*"
-fastrand = { version = "*", optional = true }
-flume = { version = "*", features = ["select"] }
-futures = { version = "*", optional = true }
+ahash = "0.8"
+anyhow = "1.0"
+chrono = "0.4"
+closure = "0.3"
+fastrand = { version = "2.3", optional = true }
+flume = { version = "0.11", features = ["select"] }
+futures = { version = "0.3", optional = true }
 # glam fast-math could cause some platform inequality
-glam = { version = "*", features = ["fast-math"], optional = true }
-image = { version = "*", optional = true }
-log = { version = "*", optional = true }
-noise = { version = "*", optional = true }
-parking_lot = { version = "*", features = ["hardware-lock-elision"] }
-rand = { version = "*", optional = true }
-relative-path = "*"
-rayon = "*"
-scc = { version = "*", features = ["serde"] }
+glam = { version = "0.30", features = ["fast-math"], optional = true }
+image = { version = "0.25", optional = true }
+log = { version = "0.4", optional = true }
+noise = { version = "0.9", optional = true }
+parking_lot = { version = "0.12", features = ["hardware-lock-elision"] }
+rand = { version = "0.9", optional = true }
+relative-path = "2.0"
+rayon = "1.10"
+scc = { version = "2.3", features = ["serde"] }
