@@ -19,7 +19,9 @@ serde = [
     "parking_lot/serde",
     "relative-path/serde",
     "scc/serde",
+    "uuid/serde",
 ]
+uuid = ["dep:uuid"]
 
 [dependencies]
 ahash = "0.8"
@@ -39,3 +41,9 @@ rand = { version = "0.9", optional = true }
 relative-path = "2.0"
 rayon = "1.10"
 scc = { version = "2.3", features = ["serde"] }
+uuid = { version = "1.16", features = [
+    "v4",
+    "v7",
+    # Requires more dependencies but is faster with no compromises
+    "fast-rng",
+], optional = true }

@@ -10,6 +10,8 @@ pub use log;
 pub use rand;
 pub use rayon;
 pub use relative_path as path;
+#[cfg(feature = "uuid")]
+pub use uuid;
 
 pub mod prelude {
     pub use closure::closure;
