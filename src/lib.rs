@@ -15,7 +15,6 @@ pub use stupid_simple_dotenv as dotenv;
 pub use uuid;
 
 pub mod prelude {
-    pub use crate::anyhow::*;
     pub use closure::closure;
     #[cfg(feature = "log")]
     pub use log::{debug, error, info, trace, warn};
