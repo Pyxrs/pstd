@@ -10,6 +10,7 @@ pub use log;
 pub use rand;
 pub use rayon;
 pub use relative_path as path;
+pub use stupid_simple_dotenv as dotenv;
 #[cfg(feature = "uuid")]
 pub use uuid;
 

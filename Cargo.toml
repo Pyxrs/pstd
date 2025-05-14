@@ -41,6 +41,7 @@ rand = { version = "0.9", optional = true }
 relative-path = "2.0"
 rayon = "1.10"
 scc = { version = "2.3", features = ["serde"] }
+stupid_simple_dotenv = "0.2"
 uuid = { version = "1.16", features = [
     "v4",
     "v7",
