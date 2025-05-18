@@ -19,6 +19,10 @@ pub mod prelude {
     #[cfg(feature = "log")]
     pub use log::{debug, error, info, trace, warn};
     pub use std::time::{Duration, Instant};
+
+    // Anyhow
+    pub use anyhow::{anyhow, bail};
+    pub type AnyResult<T> = anyhow::Result<T>;
 }
 
 pub mod anyhow {
